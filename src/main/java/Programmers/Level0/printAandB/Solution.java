@@ -1,4 +1,4 @@
-package Level0.printAandB;
+package Programmers.Level0.printAandB;
 
 import java.util.Scanner;
 

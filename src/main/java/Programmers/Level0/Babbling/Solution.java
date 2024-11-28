@@ -1,6 +1,4 @@
-package Level0.Babbling;
-
-import java.sql.Array;
+package Programmers.Level0.Babbling;
 
 public class Solution {
     public int solution(String[] babbling) {

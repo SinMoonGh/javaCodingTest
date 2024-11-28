@@ -1,4 +1,4 @@
-package Level0.Babbling;
+package Programmers.Level0.Babbling;
 
 public class Solution2 {
     public int solution(String[] babbling) {

@@ -1,4 +1,4 @@
-package Level0.printString;
+package Programmers.Level0.printString;
 
 import java.util.Scanner;
 

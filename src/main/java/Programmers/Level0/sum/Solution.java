@@ -1,4 +1,4 @@
-package Level0.sum;
+package Programmers.Level0.sum;
 
 public class Solution {
     public int solution(int num1, int num2) {

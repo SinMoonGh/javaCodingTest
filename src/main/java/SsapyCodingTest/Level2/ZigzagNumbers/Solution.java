@@ -1,6 +1,4 @@
-package SsapyCodingTest.Level1.FindTheAverage;
-
-import static java.lang.Integer.parseInt;
+package SsapyCodingTest.Level2.ZigzagNumbers;
 
 import java.util.Scanner;
 import java.io.FileInputStream;
@@ -35,20 +33,24 @@ class Solution
 
         for(int test_case = 1; test_case <= T; test_case++)
         {
-            int sum =0;
-            double avg = 0;
+            int sum = 0;
             /////////////////////////////////////////////////////////////////////////////////////////////
 			/*
 				 이 부분에 여러분의 알고리즘 구현이 들어갑니다.
 			 */
-            String input = sc.nextLine();
-            String[] splitNum = input.split(" ");
-            for(String num : splitNum){
-                sum += parseInt(num);
+            int inputNumber = sc.nextInt();
+
+            for(int i=1; i <= inputNumber; i++){
+                if(i % 2 == 0){
+                    sum -= i;
+                } else if (i % 2 == 1) {
+                    sum += i;
+                }
             }
-            avg = (double) sum / 10;
-            System.out.printf("#%d %.0f\n", test_case, avg);
+            System.out.printf("#%d %d\n", test_case, sum);
+
             /////////////////////////////////////////////////////////////////////////////////////////////
+
         }
     }
 }

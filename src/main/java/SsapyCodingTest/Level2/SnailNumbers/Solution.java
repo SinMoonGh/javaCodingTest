@@ -1,14 +1,8 @@
-package SsapyCodingTest.Level1.FindTheAverage;
+package SsapyCodingTest.Level2.SnailNumbers;
 
-import static java.lang.Integer.parseInt;
-
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.FileInputStream;
 
-/*
-   사용하는 클래스명이 Solution 이어야 하므로, 가급적 Solution.java 를 사용할 것을 권장합니다.
-   이러한 상황에서도 동일하게 java Solution 명령으로 프로그램을 수행해볼 수 있습니다.
- */
 class Solution
 {
     public static void main(String args[]) throws Exception
@@ -35,20 +29,45 @@ class Solution
 
         for(int test_case = 1; test_case <= T; test_case++)
         {
-            int sum =0;
-            double avg = 0;
+
             /////////////////////////////////////////////////////////////////////////////////////////////
 			/*
 				 이 부분에 여러분의 알고리즘 구현이 들어갑니다.
 			 */
-            String input = sc.nextLine();
-            String[] splitNum = input.split(" ");
-            for(String num : splitNum){
-                sum += parseInt(num);
+            int n = sc.nextInt();
+            int[][] array = new int[n+1][n+1];
+
+            int x = 0;
+            int y = 0;
+            for (int i = 0; i < n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    if(i == 0){
+                        array[x][y] = i * n + j;
+                        x += 1;
+                    } else if (i == 1) {
+                        array[x][y] = i * n + j;
+                        y += 1;
+                    } else if (i == 2) {
+                        array[x][y] = i * n + j;
+                        x -= 1;
+                    } else if (i == 3) {
+                        array[x][y] = i * n + j;
+                        y -= 1;
+                    }
+                    System.out.print(array[x][y] + " ");
+                }
+                System.out.println();
             }
-            avg = (double) sum / 10;
-            System.out.printf("#%d %.0f\n", test_case, avg);
+
+//            for (int i = 0; i < n; i++) {
+//                for (int j = 0; j < n; j++) {
+//                    array[i][j] = i * n + j;
+//                    System.out.print(array[i][j] + " ");
+//                }
+//                System.out.println();
+//            }
             /////////////////////////////////////////////////////////////////////////////////////////////
+
         }
     }
 }
